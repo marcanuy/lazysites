@@ -1,5 +1,6 @@
 # lazysites
-Transforms images of a static site into responsive images thanks to [lazysizes](https://github.com/aFarkas/lazysizes).
+Transforms images of a static site into responsive lazy-loading images
+thanks to [lazysizes](https://github.com/aFarkas/lazysizes).
 
 Python script that traverses all HTML files of a directory and adds
 the `lazyload` class to each HTML `img` element as required by
