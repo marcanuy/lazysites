@@ -19,7 +19,7 @@ into
 for all HTML files.
 
 It is specially designed to be run after a static website generator
-produces the websites files. This way, you can use plain Markdown in
+produces website's files. This way, you can use plain Markdown in
 them and just modify the resulting website without interfering with
 the generator so it can be applied to Hugo, Jekyll, etc.
 
