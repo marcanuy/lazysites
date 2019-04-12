@@ -1,7 +1,7 @@
 import os
 from bs4 import BeautifulSoup
 
-LAZYIMAGE_CLASS = "lazyimage"
+LAZYIMAGE_CLASS = "lazyload"
 LAZYIMAGE_JS_LIB_HTML = '<script src="https://cdn.jsdelivr.net/npm/lazysizes@4.1.7/lazysizes.js"></script>'
 
 
