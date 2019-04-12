@@ -30,7 +30,10 @@ subdirectories.
 3. Checks for `img` tags and
    1. add `lazyload` class
    2. copies `src` attribute content to `data-src`
-
+4. Adds the JS library if not present any `lazysizes.js`:
+   
+        <script src="https://cdn.jsdelivr.net/npm/lazysizes@4.1.7/lazysizes.js"></script>
+   
 ## How to use it
 
 Create a virtual environment
