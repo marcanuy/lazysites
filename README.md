@@ -2,7 +2,8 @@
 Transforms images of a static site into responsive images thanks to [lazysizes](https://github.com/aFarkas/lazysizes).
 
 Python script that traverses all HTML files of a directory and adds
-the `lazyload` class to each HTML `img` element, e.g. transforms this:
+the `lazyload` class to each HTML `img` element as required by
+**lazysizes**, e.g. transforms this:
 
 ~~~ html
 <img class="mt-3" src="foo.jpg" />
@@ -13,3 +14,23 @@ into
 ~~~ html
 <img class="mt-3 lazyload" src="foo.jpg" data-src="foo.jpg" />
 ~~~
+
+for all HTML files.
+
+It is specially designed to be run after a static website generator
+produces the websites files. This way, you can use plain Markdown in
+them and just modify the resulting website without interfering with
+the generator so it can be applied to Hugo, Jekyll, etc.
+
+## How it works
+
+1. Starting in a directory, visits all its directories and
+subdirectories.
+2. Visits all `.html` files
+3. Checks for `img` tags and
+   1. add `lazyload` class
+   2. copies `src` attribute content to `data-src`
+   
+## License
+
+MIT licensed.
