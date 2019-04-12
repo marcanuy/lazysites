@@ -102,3 +102,9 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+
+# hugo site
+public/
+
+# jekyll site
+_site/
