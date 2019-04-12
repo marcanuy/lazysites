@@ -10,11 +10,15 @@ def fix_images_in_html(file_path):
     soup = BeautifulSoup(contents, 'html.parser')
 
     for img_tag in soup.find_all("img"):
-        print("Before: {0}".format(img_tag))
+        print("\nProcessing: {0}".format(img_tag))
 
-        if LAZYIMAGE_CLASS not in img_tag:
-            current_classes = img_tag.get('class', [])
+        # add class
+        current_classes = img_tag.get('class', [])
+        if LAZYIMAGE_CLASS not in current_classes:
             img_tag['class'] =  current_classes + [LAZYIMAGE_CLASS]
+        # add data-src
+        if 'src' in img_tag.attrs: #3 and 'data-src' not in img_tag:
+            img_tag['data-src'] = img_tag['src']
         print("After: {0} \n".format(img_tag))
 
     with open(file_path, "w") as f:
