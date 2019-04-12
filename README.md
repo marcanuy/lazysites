@@ -30,6 +30,22 @@ subdirectories.
 3. Checks for `img` tags and
    1. add `lazyload` class
    2. copies `src` attribute content to `data-src`
+
+## How to use it
+
+Create a virtual environment
+
+~~~python
+python3 -m venv ~/.virtualenvs/lazysite
+~~~
+
+Use it `source ~/.virtualenvs/lazysite/bin/activate`.
+
+Install dependencies `pip install -r requirements.txt`
+
+Copy your website files to `./public`.
+
+And run the generator `python3 generator.py`.
    
 ## License
 
