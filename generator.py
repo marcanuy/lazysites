@@ -22,10 +22,10 @@ def fix_images_in_html(file_path):
         if 'src' in img_tag.attrs: #3 and 'data-src' not in img_tag:
             img_tag['data-src'] = img_tag['src']
 
-    # add js library if not present
+    # add js library if not present and some tag is using it
     lazyimage_soup = BeautifulSoup(LAZYIMAGE_JS_LIB_HTML, 'html.parser')
     body = soup.body
-    if body and 'lazysizes.js' not in str(body):
+    if body and LAZYIMAGE_CLASS in str(body) and 'lazysizes.js' not in str(body):
         body.append(lazyimage_soup.script)
 
     with open(file_path, "w") as f:
