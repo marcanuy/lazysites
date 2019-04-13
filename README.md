@@ -33,7 +33,7 @@ subdirectories.
    2. copies `src` attribute content to `data-src`
 4. Adds the JS library if not present any `lazysizes.js`:
    
-        <script src="https://cdn.jsdelivr.net/npm/lazysizes@4.1.7/lazysizes.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/lazysizes@4.1.7/lazysizes.min.js"></script>
    
 ## How to use it
 
