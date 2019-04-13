@@ -13,7 +13,7 @@ the `lazyload` class to each HTML `img` element as required by
 into
 
 ~~~ html
-<img class="mt-3 lazyload" src="foo.jpg" data-src="foo.jpg" />
+<img class="mt-3 lazyload" data-src="foo.jpg" />
 ~~~
 
 for all HTML files.
@@ -30,7 +30,7 @@ subdirectories.
 2. Visits all `.html` files
 3. Checks for `img` tags and
    1. add `lazyload` class
-   2. copies `src` attribute content to `data-src`
+   2. transforms `src` attribute to `data-src`
 4. Adds the JS library if not present any `lazysizes.js`:
    
         <script src="https://cdn.jsdelivr.net/npm/lazysizes@4.1.7/lazysizes.min.js"></script>

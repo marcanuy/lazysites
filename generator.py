@@ -18,9 +18,10 @@ def fix_images_in_html(file_path):
         current_classes = img_tag.get('class', [])
         if LAZYIMAGE_CLASS not in current_classes:
             img_tag['class'] =  current_classes + [LAZYIMAGE_CLASS]
-        # add data-src
+        # switch src to data-src
         if 'src' in img_tag.attrs: #3 and 'data-src' not in img_tag:
             img_tag['data-src'] = img_tag['src']
+            del img_tag['src']
 
     # add js library if not present and some tag is using it
     lazyimage_soup = BeautifulSoup(LAZYIMAGE_JS_LIB_HTML, 'html.parser')
